@@ -8,61 +8,85 @@
     {
       "case_id": "core-cli-acceptance",
       "claim": "Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.",
-      "command": "/bin/zsh -lc 'PYTHONPATH=src python3 -m unittest discover -s tests'",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m unittest discover -s tests",
       "evidence": [
-        "u27/evidence/run-0005.txt"
+        "u27/evidence/run-0001.txt"
       ],
-      "id": "run-0005",
+      "id": "run-0001",
       "note": "",
-      "recorded_at": "2026-05-01T00:39:35+00:00",
+      "recorded_at": "2026-05-01T02:41:19+00:00",
       "status": "pass"
     },
     {
       "case_id": "first-use-demo",
       "claim": "Boundary Engine can create a demo project and boundary register from a single command.",
-      "command": "/bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-karpathy'",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-live",
       "evidence": [
-        "u27/evidence/run-0006.txt"
+        "u27/evidence/run-0002.txt"
       ],
-      "id": "run-0006",
+      "id": "run-0002",
       "note": "",
-      "recorded_at": "2026-05-01T00:39:40+00:00",
+      "recorded_at": "2026-05-01T02:41:24+00:00",
       "status": "pass"
     },
     {
       "case_id": "wheel-build",
       "claim": "Boundary Engine packages as an installable Python project.",
-      "command": "/bin/zsh -lc '/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-karpathy'",
+      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-live",
       "evidence": [
-        "u27/evidence/run-0007.txt"
+        "u27/evidence/run-0003.txt"
       ],
-      "id": "run-0007",
+      "id": "run-0003",
       "note": "",
-      "recorded_at": "2026-05-01T00:39:44+00:00",
+      "recorded_at": "2026-05-01T02:41:31+00:00",
       "status": "pass"
     },
     {
       "case_id": "wheel-contents",
       "claim": "Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.",
-      "command": "/bin/zsh -lc '/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-karpathy/unit27_boundary_engine-0.1.0-py3-none-any.whl'",
+      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-live/unit27_boundary_engine-0.1.0-py3-none-any.whl",
       "evidence": [
-        "u27/evidence/run-0008.txt"
+        "u27/evidence/run-0004.txt"
       ],
-      "id": "run-0008",
+      "id": "run-0004",
       "note": "",
-      "recorded_at": "2026-05-01T00:39:49+00:00",
+      "recorded_at": "2026-05-01T02:41:36+00:00",
       "status": "pass"
     },
     {
       "case_id": "self-boundary-check",
       "claim": "Boundary Engine's own README stays inside its recorded proof boundary.",
-      "command": "/bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .'",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .",
       "evidence": [
-        "u27/evidence/run-0009.txt"
+        "u27/evidence/run-0005.txt"
       ],
-      "id": "run-0009",
+      "id": "run-0005",
       "note": "",
-      "recorded_at": "2026-05-01T00:39:55+00:00",
+      "recorded_at": "2026-05-01T02:41:40+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "github-publication",
+      "claim": "Boundary Engine is published as a public Unit27 GitHub repository with aligned metadata.",
+      "command": "gh repo view unit27research/unit27-boundary-engine --json nameWithOwner,description,visibility,url,repositoryTopics",
+      "evidence": [
+        "u27/evidence/run-0006.txt"
+      ],
+      "id": "run-0006",
+      "note": "",
+      "recorded_at": "2026-05-01T02:41:49+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "live-ci",
+      "claim": "Boundary Engine's live GitHub Actions workflow passes on the published main branch.",
+      "command": "gh run view 25199616051 --json conclusion,status,headSha,workflowName,url",
+      "evidence": [
+        "u27/evidence/run-0007.txt"
+      ],
+      "id": "run-0007",
+      "note": "",
+      "recorded_at": "2026-05-01T02:42:01+00:00",
       "status": "pass"
     }
   ],

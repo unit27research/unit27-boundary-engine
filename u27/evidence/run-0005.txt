@@ -1,11 +1,7 @@
-$ /bin/zsh -lc 'PYTHONPATH=src python3 -m unittest discover -s tests'
+$ /usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .
 exit_code: 0
 
 ## stdout
+Boundary scan complete: unsupported=0
 
 ## stderr
-..........
-----------------------------------------------------------------------
-Ran 10 tests in 0.092s
-
-OK

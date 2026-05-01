@@ -1,11 +1,11 @@
 # Boundary Register
 
 Source: `README.md`
-Generated: 2026-05-01T00:40:56+00:00
+Generated: 2026-05-01T02:42:12+00:00
 
 ## Summary
 - Unsupported claims: 0
-- Verified proof claims: 5
+- Verified proof claims: 7
 
 ## Findings
 
@@ -14,6 +14,8 @@ Generated: 2026-05-01T00:40:56+00:00
 ## Proof Cases
 - `core-cli-acceptance`
 - `first-use-demo`
+- `github-publication`
+- `live-ci`
 - `self-boundary-check`
 - `wheel-build`
 - `wheel-contents`

@@ -1,34 +1,44 @@
 # Proof Packet
 
 Project: unit27-boundary-engine
-Generated: 2026-05-01T00:40:33+00:00
+Generated: 2026-05-01T02:42:08+00:00
 
 ## Verified Claims
 
 - Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.
   - Case: `core-cli-acceptance`
-  - Command: `/bin/zsh -lc 'PYTHONPATH=src python3 -m unittest discover -s tests'`
-  - Evidence: `u27/evidence/run-0005.txt`
+  - Command: `/usr/bin/env PYTHONPATH=src python3 -m unittest discover -s tests`
+  - Evidence: `u27/evidence/run-0001.txt`
 
 - Boundary Engine can create a demo project and boundary register from a single command.
   - Case: `first-use-demo`
-  - Command: `/bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-karpathy'`
-  - Evidence: `u27/evidence/run-0006.txt`
+  - Command: `/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-live`
+  - Evidence: `u27/evidence/run-0002.txt`
 
 - Boundary Engine packages as an installable Python project.
   - Case: `wheel-build`
-  - Command: `/bin/zsh -lc '/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-karpathy'`
-  - Evidence: `u27/evidence/run-0007.txt`
+  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-live`
+  - Evidence: `u27/evidence/run-0003.txt`
 
 - Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.
   - Case: `wheel-contents`
-  - Command: `/bin/zsh -lc '/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-karpathy/unit27_boundary_engine-0.1.0-py3-none-any.whl'`
-  - Evidence: `u27/evidence/run-0008.txt`
+  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-live/unit27_boundary_engine-0.1.0-py3-none-any.whl`
+  - Evidence: `u27/evidence/run-0004.txt`
 
 - Boundary Engine's own README stays inside its recorded proof boundary.
   - Case: `self-boundary-check`
-  - Command: `/bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .'`
-  - Evidence: `u27/evidence/run-0009.txt`
+  - Command: `/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .`
+  - Evidence: `u27/evidence/run-0005.txt`
+
+- Boundary Engine is published as a public Unit27 GitHub repository with aligned metadata.
+  - Case: `github-publication`
+  - Command: `gh repo view unit27research/unit27-boundary-engine --json nameWithOwner,description,visibility,url,repositoryTopics`
+  - Evidence: `u27/evidence/run-0006.txt`
+
+- Boundary Engine's live GitHub Actions workflow passes on the published main branch.
+  - Case: `live-ci`
+  - Command: `gh run view 25199616051 --json conclusion,status,headSha,workflowName,url`
+  - Evidence: `u27/evidence/run-0007.txt`
 
 ## Open Failures
 
@@ -42,10 +52,16 @@ Generated: 2026-05-01T00:40:33+00:00
 - Wheel evidence proves local packaging only; it does not prove PyPI publication or GitHub release state.
 - Wheel contents evidence proves local artifact structure only; it does not prove installation in every target environment.
 - This check covers the current README only; future public docs should be scanned separately.
+- This claim covers the GitHub repository state at the time of recording only.
+- This does not prove package registry publication.
+- This claim covers the latest recorded workflow run only.
+- It does not prove future commits or external service availability.
 
 ## Case Inventory
 - `core-cli-acceptance`: pass - Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.
 - `first-use-demo`: pass - Boundary Engine can create a demo project and boundary register from a single command.
+- `github-publication`: pass - Boundary Engine is published as a public Unit27 GitHub repository with aligned metadata.
+- `live-ci`: pass - Boundary Engine's live GitHub Actions workflow passes on the published main branch.
 - `self-boundary-check`: pass - Boundary Engine's own README stays inside its recorded proof boundary.
 - `wheel-build`: pass - Boundary Engine packages as an installable Python project.
 - `wheel-contents`: pass - Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.

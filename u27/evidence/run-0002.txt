@@ -1,0 +1,9 @@
+$ /usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-live
+exit_code: 0
+
+## stdout
+Demo project: /tmp/boundary-engine-proof-demo-live
+Boundary register: /tmp/boundary-engine-proof-demo-live/u27/BOUNDARY_REGISTER.md
+Boundary scan complete: unsupported=2
+
+## stderr

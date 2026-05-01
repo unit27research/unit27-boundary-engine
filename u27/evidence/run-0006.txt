@@ -1,9 +1,7 @@
-$ /bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-karpathy'
+$ gh repo view unit27research/unit27-boundary-engine --json nameWithOwner,description,visibility,url,repositoryTopics
 exit_code: 0
 
 ## stdout
-Demo project: /tmp/boundary-engine-proof-demo-karpathy
-Boundary register: /tmp/boundary-engine-proof-demo-karpathy/u27/BOUNDARY_REGISTER.md
-Boundary scan complete: unsupported=2
+{"description":"Boundary Engine enforces claim discipline by checking public repo language against recorded proof artifacts.","nameWithOwner":"unit27research/unit27-boundary-engine","repositoryTopics":[{"name":"ai-tools"},{"name":"boundary-engine"},{"name":"claim-discipline"},{"name":"developer-tools"},{"name":"research-infrastructure"},{"name":"unit27"},{"name":"proof-ledger"}],"url":"https://github.com/unit27research/unit27-boundary-engine","visibility":"PUBLIC"}
 
 ## stderr

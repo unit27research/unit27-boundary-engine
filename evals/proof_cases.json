@@ -40,5 +40,23 @@
     "limits": [
       "This check covers the current README only; future public docs should be scanned separately."
     ]
+  },
+  {
+    "claim": "Boundary Engine is published as a public Unit27 GitHub repository with aligned metadata.",
+    "expected": "GitHub reports unit27research/unit27-boundary-engine as public and returns the expected description and topic metadata.",
+    "id": "github-publication",
+    "limits": [
+      "This claim covers the GitHub repository state at the time of recording only.",
+      "This does not prove package registry publication."
+    ]
+  },
+  {
+    "claim": "Boundary Engine's live GitHub Actions workflow passes on the published main branch.",
+    "expected": "GitHub Actions reports the latest CI run on main as completed successfully for the published repository.",
+    "id": "live-ci",
+    "limits": [
+      "This claim covers the latest recorded workflow run only.",
+      "It does not prove future commits or external service availability."
+    ]
   }
 ]

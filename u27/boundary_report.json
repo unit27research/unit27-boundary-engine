@@ -1,9 +1,11 @@
 {
   "findings": [],
-  "generated_at": "2026-05-01T00:40:56+00:00",
+  "generated_at": "2026-05-01T02:42:12+00:00",
   "proof_cases": [
     "core-cli-acceptance",
     "first-use-demo",
+    "github-publication",
+    "live-ci",
     "self-boundary-check",
     "wheel-build",
     "wheel-contents"
@@ -12,6 +14,6 @@
   "source": "README.md",
   "summary": {
     "unsupported_claims": 0,
-    "verified_claims": 5
+    "verified_claims": 7
   }
 }
