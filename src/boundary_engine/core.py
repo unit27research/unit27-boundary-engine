@@ -37,12 +37,18 @@ def load_proof_ledger(path: Path | str) -> ProofClaims:
     if payload.get("schema_version") != "0.1":
         raise BoundaryError("Unsupported proof ledger schema_version")
 
+    latest_by_case = {}
+    for run in payload.get("runs", []):
+        case_id = run.get("case_id", "")
+        if case_id:
+            latest_by_case[case_id] = run
+
     verified_claims = []
     verified_cases = set()
-    for run in payload.get("runs", []):
+    for case_id, run in latest_by_case.items():
         if run.get("status") == "pass":
             verified_claims.append(run.get("claim", ""))
-            verified_cases.add(run.get("case_id", ""))
+            verified_cases.add(case_id)
     return ProofClaims(verified_claims=tuple(item for item in verified_claims if item), verified_cases=verified_cases)
 
 

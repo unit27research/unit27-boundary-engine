@@ -1,14 +1,14 @@
 # Proof Packet
 
 Project: unit27-boundary-engine
-Generated: 2026-05-01T02:42:08+00:00
+Generated: 2026-05-01T02:46:46+00:00
 
 ## Verified Claims
 
 - Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.
   - Case: `core-cli-acceptance`
   - Command: `/usr/bin/env PYTHONPATH=src python3 -m unittest discover -s tests`
-  - Evidence: `u27/evidence/run-0001.txt`
+  - Evidence: `u27/evidence/run-0009.txt`
 
 - Boundary Engine can create a demo project and boundary register from a single command.
   - Case: `first-use-demo`
@@ -17,18 +17,18 @@ Generated: 2026-05-01T02:42:08+00:00
 
 - Boundary Engine packages as an installable Python project.
   - Case: `wheel-build`
-  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-live`
-  - Evidence: `u27/evidence/run-0003.txt`
+  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-karpathy-hook-wheel`
+  - Evidence: `u27/evidence/run-0010.txt`
 
 - Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.
   - Case: `wheel-contents`
-  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-live/unit27_boundary_engine-0.1.0-py3-none-any.whl`
-  - Evidence: `u27/evidence/run-0004.txt`
+  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-karpathy-hook-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl`
+  - Evidence: `u27/evidence/run-0011.txt`
 
 - Boundary Engine's own README stays inside its recorded proof boundary.
   - Case: `self-boundary-check`
   - Command: `/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .`
-  - Evidence: `u27/evidence/run-0005.txt`
+  - Evidence: `u27/evidence/run-0012.txt`
 
 - Boundary Engine is published as a public Unit27 GitHub repository with aligned metadata.
   - Case: `github-publication`

@@ -44,6 +44,37 @@ class BoundaryEngineCoreTests(unittest.TestCase):
             self.assertEqual(list(proof.verified_claims), ["The project test suite passes in the current local checkout."])
             self.assertEqual(proof.verified_cases, {"tests-pass"})
 
+    def test_load_proof_ledger_uses_latest_run_per_case(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger_path = Path(tmp) / "proof_ledger.json"
+            ledger_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": "0.1",
+                        "runs": [
+                            {
+                                "case_id": "tests-pass",
+                                "claim": "Old test evidence.",
+                                "status": "pass",
+                                "evidence": ["u27/evidence/run-0001.txt"],
+                            },
+                            {
+                                "case_id": "tests-pass",
+                                "claim": "Current test evidence.",
+                                "status": "pass",
+                                "evidence": ["u27/evidence/run-0002.txt"],
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            proof = load_proof_ledger(ledger_path)
+
+            self.assertEqual(list(proof.verified_claims), ["Current test evidence."])
+            self.assertEqual(proof.verified_cases, {"tests-pass"})
+
     def test_scan_markdown_flags_claims_without_proof(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

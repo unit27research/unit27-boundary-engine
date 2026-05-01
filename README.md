@@ -17,6 +17,19 @@ It answers one narrow question:
 
 > Do this repo's public claims stay inside its recorded proof?
 
+## Why Use It
+
+Use Boundary Engine before publishing a repo, demo, or research artifact to catch public claims that outrun recorded evidence.
+
+It is useful when a README says things like `production-ready`, `tested`, `validated`, or `ready for review`, but the repo needs an explicit proof trail for those claims.
+
+Example:
+
+```text
+Claim: This repo is production-ready.
+Result: unsupported unless a matching passing proof case exists.
+```
+
 ## 60-Second Start
 
 From this repo:

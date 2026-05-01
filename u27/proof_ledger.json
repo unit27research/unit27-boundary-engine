@@ -88,6 +88,66 @@
       "note": "",
       "recorded_at": "2026-05-01T02:42:01+00:00",
       "status": "pass"
+    },
+    {
+      "case_id": "self-boundary-check",
+      "claim": "Boundary Engine's own README stays inside its recorded proof boundary.",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .",
+      "evidence": [
+        "u27/evidence/run-0008.txt"
+      ],
+      "id": "run-0008",
+      "note": "",
+      "recorded_at": "2026-05-01T02:44:58+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "core-cli-acceptance",
+      "claim": "Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m unittest discover -s tests",
+      "evidence": [
+        "u27/evidence/run-0009.txt"
+      ],
+      "id": "run-0009",
+      "note": "",
+      "recorded_at": "2026-05-01T02:46:23+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "wheel-build",
+      "claim": "Boundary Engine packages as an installable Python project.",
+      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-karpathy-hook-wheel",
+      "evidence": [
+        "u27/evidence/run-0010.txt"
+      ],
+      "id": "run-0010",
+      "note": "",
+      "recorded_at": "2026-05-01T02:46:29+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "wheel-contents",
+      "claim": "Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.",
+      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-karpathy-hook-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl",
+      "evidence": [
+        "u27/evidence/run-0011.txt"
+      ],
+      "id": "run-0011",
+      "note": "",
+      "recorded_at": "2026-05-01T02:46:34+00:00",
+      "status": "pass"
+    },
+    {
+      "case_id": "self-boundary-check",
+      "claim": "Boundary Engine's own README stays inside its recorded proof boundary.",
+      "command": "/usr/bin/env PYTHONPATH=src python3 -m boundary_engine.cli scan README.md --proof u27/proof_ledger.json --root .",
+      "evidence": [
+        "u27/evidence/run-0012.txt"
+      ],
+      "id": "run-0012",
+      "note": "",
+      "recorded_at": "2026-05-01T02:46:39+00:00",
+      "status": "pass"
     }
   ],
   "schema_version": "0.1"
