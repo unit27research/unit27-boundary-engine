@@ -28,7 +28,7 @@ That boundary matters:
 
 Every public Unit27 repo should include a near-top `## Why Use It` section before setup details.
 
-That section is allowed to be more plainspoken than the surrounding system language because it serves the pickup-and-use test: a technical reviewer should understand not only what the tool is, but why they would run it now.
+That section is allowed to be more plainspoken than the surrounding system language because it serves the immediate-use standard: a technical reviewer should understand not only what the tool is, but why they would run it now.
 
 The section should stay narrow:
 

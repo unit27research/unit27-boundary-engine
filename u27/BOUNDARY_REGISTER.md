@@ -1,7 +1,7 @@
 # Boundary Register
 
-Source: `README.md`
-Generated: 2026-05-01T02:48:07+00:00
+Source: `DESIGN_NOTES.md`
+Generated: 2026-05-01T03:00:21+00:00
 
 ## Summary
 - Unsupported claims: 0

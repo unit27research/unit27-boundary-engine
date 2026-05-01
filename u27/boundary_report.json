@@ -1,6 +1,6 @@
 {
   "findings": [],
-  "generated_at": "2026-05-01T02:48:07+00:00",
+  "generated_at": "2026-05-01T03:00:21+00:00",
   "proof_cases": [
     "core-cli-acceptance",
     "first-use-demo",
@@ -11,7 +11,7 @@
     "wheel-contents"
   ],
   "schema_version": "0.1",
-  "source": "README.md",
+  "source": "DESIGN_NOTES.md",
   "summary": {
     "unsupported_claims": 0,
     "verified_claims": 7
