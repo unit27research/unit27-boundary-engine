@@ -148,6 +148,18 @@
       "note": "",
       "recorded_at": "2026-05-01T02:46:39+00:00",
       "status": "pass"
+    },
+    {
+      "case_id": "live-ci",
+      "claim": "Boundary Engine's live GitHub Actions workflow passes on the published main branch.",
+      "command": "gh run view 25199856545 --json conclusion,status,headSha,workflowName,url",
+      "evidence": [
+        "u27/evidence/run-0013.txt"
+      ],
+      "id": "run-0013",
+      "note": "",
+      "recorded_at": "2026-05-01T02:48:00+00:00",
+      "status": "pass"
     }
   ],
   "schema_version": "0.1"

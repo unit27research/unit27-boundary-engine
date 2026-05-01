@@ -1,0 +1,7 @@
+$ gh run view 25199856545 --json conclusion,status,headSha,workflowName,url
+exit_code: 0
+
+## stdout
+{"conclusion":"success","headSha":"56d3dbeaad50752e1c6d9d42b5c87f939ec10d04","status":"completed","url":"https://github.com/unit27research/unit27-boundary-engine/actions/runs/25199856545","workflowName":"CI"}
+
+## stderr
