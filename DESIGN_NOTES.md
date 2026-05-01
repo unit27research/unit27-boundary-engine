@@ -24,6 +24,19 @@ That boundary matters:
 - **Boundary layer:** Compares detected claims against recorded proof.
 - **Register layer:** Renders unsupported claims, reasons, and safer wording.
 
+## Unit27 README Gate
+
+Every public Unit27 repo should include a near-top `## Why Use It` section before setup details.
+
+That section is allowed to be more plainspoken than the surrounding system language because it serves the pickup-and-use test: a technical reviewer should understand not only what the tool is, but why they would run it now.
+
+The section should stay narrow:
+
+1. Name the concrete moment when the tool is useful.
+2. Name the failure it prevents.
+3. Show a short example of input or outcome.
+4. Avoid sales language, broad readiness claims, or unsupported proof language.
+
 ## Failure Modes
 
 Boundary Engine should fail or downgrade when:
@@ -33,6 +46,7 @@ Boundary Engine should fail or downgrade when:
 - The markdown file is missing.
 - A claim pattern is detected without matching proof.
 - The register implies broader certainty than the proof ledger supports.
+- A Unit27 README is understandable but does not explain why a reviewer would pick up and use the tool.
 
 ## What I Would Improve Next
 
