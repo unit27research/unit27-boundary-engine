@@ -13,6 +13,13 @@ FUNCTION: Claim Boundary + Proof Alignment
 REF_ID: BOUNDARY-ENGINE-01
 ```
 
+## Release Status
+
+`SOURCE_STATUS: PUBLIC_PACKAGE`
+`ACCESS_STATUS: CLEARED_FOR_EXTERNAL_USE`
+
+This repository is a released Unit27 field kit: visible, inspectable, and intended for orientation, testing, and practical use. Controlled protocol materials remain outside this source package.
+
 It answers one narrow question:
 
 > Do this repo's public claims stay inside its recorded proof?
@@ -96,7 +103,7 @@ Boundary Engine does not decide whether a project is good. It checks whether pub
 
 ## Reliability
 
-Boundary Engine is maintained as part of the Unit27 research toolchain. CI verifies the test suite, wheel build, and wheel contents before changes are considered ready.
+Boundary Engine is released as part of the Unit27 public tooling channel. CI verifies the test suite, wheel build, and wheel contents before changes are considered ready.
 
 ## What It Does Not Do
 
