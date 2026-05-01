@@ -1,0 +1,9 @@
+$ /bin/zsh -lc 'PYTHONPATH=src python3 -m boundary_engine.cli demo --root /tmp/boundary-engine-proof-demo-karpathy'
+exit_code: 0
+
+## stdout
+Demo project: /tmp/boundary-engine-proof-demo-karpathy
+Boundary register: /tmp/boundary-engine-proof-demo-karpathy/u27/BOUNDARY_REGISTER.md
+Boundary scan complete: unsupported=2
+
+## stderr

@@ -1,0 +1,17 @@
+{
+  "findings": [],
+  "generated_at": "2026-05-01T00:40:56+00:00",
+  "proof_cases": [
+    "core-cli-acceptance",
+    "first-use-demo",
+    "self-boundary-check",
+    "wheel-build",
+    "wheel-contents"
+  ],
+  "schema_version": "0.1",
+  "source": "README.md",
+  "summary": {
+    "unsupported_claims": 0,
+    "verified_claims": 5
+  }
+}

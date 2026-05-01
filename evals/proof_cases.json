@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Boundary Engine can scan markdown against Proof Ledger claims, flag unsupported public language, and write boundary artifacts.",
+    "expected": "The unittest suite passes, including core and CLI coverage for unsupported claims, matching proof phrases, and generated register/json artifacts.",
+    "id": "core-cli-acceptance",
+    "limits": [
+      "This evidence covers deterministic local markdown scanning, not legal review or universal truth verification.",
+      "The current scanner uses a fixed high-risk phrase set rather than a configurable policy file."
+    ]
+  },
+  {
+    "claim": "Boundary Engine can create a demo project and boundary register from a single command.",
+    "expected": "The demo command exits 0 and writes a sample README, proof ledger, boundary register, and JSON report.",
+    "id": "first-use-demo",
+    "limits": [
+      "The demo intentionally includes unsupported claims so the register is visible on first use.",
+      "Demo evidence proves the first-use flow only; it does not prove every repository shape."
+    ]
+  },
+  {
+    "claim": "Boundary Engine packages as an installable Python project.",
+    "expected": "A wheel build produces unit27_boundary_engine-0.1.0.",
+    "id": "wheel-build",
+    "limits": [
+      "Wheel evidence proves local packaging only; it does not prove PyPI publication or GitHub release state."
+    ]
+  },
+  {
+    "claim": "Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.",
+    "expected": "The wheel verifier confirms required package files and entry_points.txt contents.",
+    "id": "wheel-contents",
+    "limits": [
+      "Wheel contents evidence proves local artifact structure only; it does not prove installation in every target environment."
+    ]
+  },
+  {
+    "claim": "Boundary Engine's own README stays inside its recorded proof boundary.",
+    "expected": "The boundary-engine scan command exits 0 against README.md using the repo's Proof Ledger artifact.",
+    "id": "self-boundary-check",
+    "limits": [
+      "This check covers the current README only; future public docs should be scanned separately."
+    ]
+  }
+]

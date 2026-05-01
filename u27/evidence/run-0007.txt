@@ -1,0 +1,16 @@
+$ /bin/zsh -lc '/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-karpathy'
+exit_code: 0
+
+## stdout
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: unit27-boundary-engine
+  Building wheel for unit27-boundary-engine (pyproject.toml): started
+  Building wheel for unit27-boundary-engine (pyproject.toml): finished with status 'done'
+  Created wheel for unit27-boundary-engine: filename=unit27_boundary_engine-0.1.0-py3-none-any.whl size=6458 sha256=6381113b7d6ce15ab57fe120673ac0fcbd27f7e2f7ad39c1add42d6f1588e437
+  Stored in directory: /private/var/folders/cg/3wtt78v577d66ckcvzykyvjh0000gn/T/pip-ephem-wheel-cache-o2eufb1z/wheels/a9/05/2a/d082e48239bde0010faa486a2d0f9b0bca1b331ef67b99b639
+Successfully built unit27-boundary-engine
+
+## stderr
+WARNING: The directory '/Users/joshuabloodworth/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.

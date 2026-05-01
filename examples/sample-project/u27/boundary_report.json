@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "line": 3,
+      "reason": "No matching passing proof-ledger claim was found.",
+      "risk": "unsupported-claim",
+      "safer_wording": "Replace with the exact verified readiness state.",
+      "text": "production-ready"
+    },
+    {
+      "line": 3,
+      "reason": "No matching passing proof-ledger claim was found.",
+      "risk": "unsupported-claim",
+      "safer_wording": "Tie the claim to a recorded proof case or soften it.",
+      "text": "proves reliable agent behavior"
+    }
+  ],
+  "generated_at": "2026-05-01T00:40:56+00:00",
+  "proof_cases": [
+    "tests-pass"
+  ],
+  "schema_version": "0.1",
+  "source": "README.md",
+  "summary": {
+    "unsupported_claims": 2,
+    "verified_claims": 1
+  }
+}

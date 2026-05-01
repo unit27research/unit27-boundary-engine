@@ -1,0 +1,1 @@
+{"schema_version":"0.1","runs":[{"case_id":"tests-pass","claim":"The project test suite passes in the current local checkout.","status":"pass","evidence":["u27/evidence/run-0001.txt"]}]}
