@@ -81,6 +81,10 @@ README -> extract claim risks -> compare proof ledger -> write boundary register
 
 Boundary Engine does not decide whether a project is good. It checks whether public-facing language has outrun recorded evidence.
 
+## Reliability
+
+Boundary Engine is maintained as part of the Unit27 research toolchain. CI verifies the test suite, wheel build, and wheel contents before changes are considered ready.
+
 ## What It Does Not Do
 
 Boundary Engine does not:
