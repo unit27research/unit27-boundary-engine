@@ -1,11 +1,11 @@
-# U27-S06 // Boundary Engine
+# U27-S07 // Boundary Engine
 
 [![CI](https://github.com/unit27research/unit27-boundary-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/unit27research/unit27-boundary-engine/actions/workflows/ci.yml)
 
 Boundary Engine enforces claim discipline by checking public repo language against recorded proof artifacts.
 
 ```text
-U27-S06
+U27-S07
 BOUNDARY ENGINE
 
 CLASS: SYSTEM
