@@ -39,9 +39,11 @@ Result: unsupported unless a matching passing proof case exists.
 
 ## 60-Second Start
 
-From this repo:
+The current public release is GitHub-first. Run it from a local checkout:
 
 ```bash
+git clone https://github.com/unit27research/unit27-boundary-engine
+cd unit27-boundary-engine
 pip install -e .
 boundary-engine demo
 cat boundary-engine-demo/u27/BOUNDARY_REGISTER.md
@@ -72,7 +74,7 @@ For local development:
 pip install -e .
 ```
 
-After this repo is public:
+Install directly from GitHub:
 
 ```bash
 pipx install git+https://github.com/unit27research/unit27-boundary-engine
