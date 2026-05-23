@@ -17,12 +17,12 @@ Generated: 2026-05-01T03:00:21+00:00
 
 - Boundary Engine packages as an installable Python project.
   - Case: `wheel-build`
-  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-readme-gate-wheel`
+  - Command: `python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-readme-gate-wheel`
   - Evidence: `u27/evidence/run-0014.txt`
 
 - Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.
   - Case: `wheel-contents`
-  - Command: `/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-readme-gate-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl`
+  - Command: `python3 scripts/verify_wheel.py /tmp/boundary-engine-readme-gate-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl`
   - Evidence: `u27/evidence/run-0015.txt`
 
 - Boundary Engine's own README stays inside its recorded proof boundary.

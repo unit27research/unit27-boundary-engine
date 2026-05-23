@@ -32,7 +32,7 @@
     {
       "case_id": "wheel-build",
       "claim": "Boundary Engine packages as an installable Python project.",
-      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-live",
+      "command": "python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-proof-wheel-live",
       "evidence": [
         "u27/evidence/run-0003.txt"
       ],
@@ -44,7 +44,7 @@
     {
       "case_id": "wheel-contents",
       "claim": "Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.",
-      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-live/unit27_boundary_engine-0.1.0-py3-none-any.whl",
+      "command": "python3 scripts/verify_wheel.py /tmp/boundary-engine-proof-wheel-live/unit27_boundary_engine-0.1.0-py3-none-any.whl",
       "evidence": [
         "u27/evidence/run-0004.txt"
       ],
@@ -140,7 +140,7 @@
     {
       "case_id": "wheel-build",
       "claim": "Boundary Engine packages as an installable Python project.",
-      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-readme-gate-wheel",
+      "command": "python3 -m pip wheel . --no-deps --no-build-isolation -w /tmp/boundary-engine-readme-gate-wheel",
       "evidence": [
         "u27/evidence/run-0014.txt"
       ],
@@ -152,7 +152,7 @@
     {
       "case_id": "wheel-contents",
       "claim": "Boundary Engine's built wheel contains the CLI modules and boundary-engine console entry point.",
-      "command": "/Users/joshuabloodworth/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/verify_wheel.py /tmp/boundary-engine-readme-gate-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl",
+      "command": "python3 scripts/verify_wheel.py /tmp/boundary-engine-readme-gate-wheel/unit27_boundary_engine-0.1.0-py3-none-any.whl",
       "evidence": [
         "u27/evidence/run-0015.txt"
       ],
